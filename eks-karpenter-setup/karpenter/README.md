@@ -12,18 +12,18 @@ This repository provides Terraform code and Terragrunt configuration to deploy a
 ## Setup and Deployment
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/aren-abraham-ops/OpsTasks/tree/main/eks-karpenter-setup/karpenter
-   cd your-repo/terragrunt/dev
+   git clone https://github.com/aren-abraham-ops/OpsTasks.git
+   cd https://github.com/aren-abraham-ops/OpsTasks.git/karpenter/
    ```
 
 2. **Initialize Terragrunt**:
    ```bash
-   terragrunt init
+   terraform init
    ```
 
 3. **Deploy the EKS cluster**:
    ```bash
-   terragrunt apply
+   terraform apply
    ```
 
    This will provision the EKS cluster, Karpenter, and associated resources in the specified VPC.
@@ -70,8 +70,3 @@ To destroy the EKS cluster and associated resources:
 ```bash
 terragrunt destroy
 ```
-Ensure you run this command in the appropriate environment directory (`dev` or `prod`).
-
-## Additional Notes
-- Adjust the Terraform variables in `terragrunt.hcl` as needed for your setup.
-- Refer to the `karpenter.tf` file for additional configuration options.
