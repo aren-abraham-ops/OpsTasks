@@ -134,7 +134,7 @@ resource "aws_eks_node_group" "arm64_node_group" {
   node_group_name = "arm64-node-group"
   node_role_arn   = aws_iam_role.eks_node_role.arn
   subnet_ids      = var.private_subnet_ids
-  instance_types  = ["m6g.medium"]
+  instance_types  = ["m5g.medium"]
   ami_type        = "AL2_ARM_64"
 
   scaling_config {
