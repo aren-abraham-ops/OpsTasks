@@ -1,7 +1,7 @@
-# EKS Cluster Setup with Karpenter and Graviton using Terragrunt
+# EKS Cluster Setup with Karpenter and Graviton using Terraform
 
 ## Overview
-This repository provides Terraform code and Terragrunt configuration to deploy an EKS cluster on AWS using the latest available version. The cluster integrates Karpenter for autoscaling, supporting both x86 and Graviton (ARM64) instances.
+This repository provides Terraform code to deploy an EKS cluster on AWS using the latest available version. The cluster integrates Karpenter for autoscaling, supporting both x86 and Graviton (ARM64) instances.
 
 ## Prerequisites
 - Terraform v1.5.0+
@@ -68,5 +68,5 @@ kubectl apply -f x86-pod.yaml
 ## Cleanup
 To destroy the EKS cluster and associated resources:
 ```bash
-terragrunt destroy
+terraform destroy
 ```
